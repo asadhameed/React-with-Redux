@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import CommentDetail from "./CommentDetail";
 import ApprovalCard from "./ApprovalCard";
 import Message from "./Message";
+import Panel from "./Panel";
 const App = () => {
   console.log("hello");
   return (
@@ -25,10 +26,12 @@ const App = () => {
           }}
         />
       </ApprovalCard>
-      <Message
-        service="change in the service"
-        details="we just update our privacy services"
-      ></Message>
+      <Panel>
+        <Message
+          service="change in the service"
+          details="we just update our privacy services"
+        ></Message>
+      </Panel>
     </div>
   );
 };
