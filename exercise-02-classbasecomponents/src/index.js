@@ -13,6 +13,9 @@ class App extends React.Component {
       (err) => this.setState({ errorMessage: err.message })
     );
   }
+  componentDidUpdate() {
+    console.log("When the componentDidUpdate");
+  }
   render() {
     if (this.state.lat && !this.state.errorMessage)
       return <div>User Latitude :{this.state.lat}</div>;
