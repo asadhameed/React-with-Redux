@@ -19,7 +19,8 @@ class SearchBar extends React.Component {
      * call then function inside in element as arrow function
      * onSubmit={this.onFromSubmit} change to onSubmit={(e)=>this.onFormSubmit(e)}
      */
-    console.log(this.state.term);
+    this.props.onSubmit(this.state.term);
+    //console.log(this.state.term);
   };
 
   render() {
