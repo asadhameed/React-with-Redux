@@ -2,14 +2,30 @@ import React from "react";
 
 class SearchBar extends React.Component {
   state = { term: "" };
-  onFromSubmit(event) {
+  onFormSubmit(event) {
     event.preventDefault();
+    /*******
+     * console.log(this.state.term)
+     * the upper console log look correct but this give an error
+     * TypeError: Cannot read property 'state' of undefined
+     * In react you can always face such error
+     * SO understand the two concept here
+     * 1) what is 'this' used for in a class?
+     * 2) how is the value of 'this' determined in a function
+     *
+     * how can solve this problem
+     * constructor way
+     * arrow function
+     * call then function inside in element as arrow function
+     * onSubmit={this.onFromSubmit} change to onSubmit={()=>this.onFormSubmit()}
+     */
+    console.log(this.state.term);
   }
 
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form" onSubmit={this.onFromSubmit}>
+        <form className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
             <label>Search </label>
             <input
