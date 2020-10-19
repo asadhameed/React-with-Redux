@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
      * constructor way
      * arrow function
      * call then function inside in element as arrow function
-     * onSubmit={this.onFromSubmit} change to onSubmit={()=>this.onFormSubmit()}
+     * onSubmit={this.onFromSubmit} change to onSubmit={(e)=>this.onFormSubmit(e)}
      */
     console.log(this.state.term);
   }
@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form" onSubmit={this.onFormSubmit}>
+        <form className="ui form" onSubmit={(e) => this.onFormSubmit(e)}>
           <div className="field">
             <label>Search </label>
             <input
