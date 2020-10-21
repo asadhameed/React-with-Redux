@@ -4,7 +4,7 @@ class SearchBar extends React.Component {
   state = { term: "" };
   onFormSubmit = (event) => {
     event.preventDefault();
-    /*******
+    /******* responsible for  data
      * console.log(this.state.term)
      * the upper console log look correct but this give an error
      * TypeError: Cannot read property 'state' of undefined
