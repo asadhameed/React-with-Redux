@@ -8,14 +8,15 @@ class UserHolder extends React.Component {
   }
 
   render() {
-    const user = this.props.users.find((user) => user.id === this.props.userId);
+    const { user } = this.props;
     if (!user) return null;
     return <div>{user.name}</div>;
   }
 }
-
-const mapStateToProp = (state) => {
-  return { users: state.users };
+// This can take ownProps = this.props of Component
+// we can take parameter of this.props to the following function
+const mapStateToProp = (state, ownProps) => {
+  return { user: state.users.find((user) => user.id === ownProps.userId) };
 };
 
 export default connect(mapStateToProp, { fetchUser })(UserHolder);
