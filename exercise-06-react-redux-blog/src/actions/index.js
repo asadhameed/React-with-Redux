@@ -6,3 +6,11 @@ export const fetchPosts = () => async (dispatch) => {
     payLoad: response.data,
   });
 };
+
+export const fetchUser = (userId) => async (dispatch) => {
+  const response = await jsonPlaceHolder.get("/users/" + userId);
+  dispatch({
+    type: "FETCH_User",
+    payLoad: response.data,
+  });
+};
