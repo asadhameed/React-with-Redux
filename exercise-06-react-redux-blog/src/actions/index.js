@@ -3,8 +3,14 @@ import _ from "lodash";
 
 export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   await dispatch(fetchPosts());
-  const userId = _.uniq(_.map(getState().posts, "userId"));
-  userId.forEach((id) => dispatch(fetchUser(id)));
+  // const userId = _.uniq(_.map(getState().posts, "userId"));
+  // userId.forEach((id) => dispatch(fetchUser(id)));
+
+  _.chain(getState().posts)
+    .map("userId")
+    .uniq()
+    .forEach((id) => dispatch(fetchUser(id)))
+    .value();
 };
 export const fetchPosts = () => async (dispatch) => {
   const response = await jsonPlaceHolder.get("/posts");
