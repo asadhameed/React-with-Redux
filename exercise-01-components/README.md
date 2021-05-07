@@ -1,4 +1,4 @@
-This exercise helps that how can use Redux with React app.
+This exercise helps that how can use React app. How can make react components.
 
 ## Available Scripts
 
