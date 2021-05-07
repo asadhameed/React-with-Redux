@@ -1,5 +1,7 @@
 Calls Youtube API that how can search videos and plays that video with react.
 
+- open file src/api/youtube.js file from project directory give your own KEY
+
 ## Available Scripts
 
 In the project directory, you can run:

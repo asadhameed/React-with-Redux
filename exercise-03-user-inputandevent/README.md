@@ -1,5 +1,7 @@
 Calls unsplash API that how can search images with react.
 
+- open file src/api/unsplash.js file from project directory give your own Client-ID
+
 ## Available Scripts
 
 In the project directory, you can run:
