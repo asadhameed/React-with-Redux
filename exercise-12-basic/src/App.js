@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpenses from "./components/NewExpenses/NewExpenses";
 function App() {
-  const expenses = [
+  const [expenses, setExpenses] = useState([
     {
       id: "e1",
       title: "Toilet Paper",
@@ -21,23 +22,27 @@ function App() {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
-  ];
+  ]);
+  const addExpensesHandler = (expense) => {
+    setExpenses((prv) => [expense, ...prv]);
+  };
   /**
    * you can write react component like this as well
    * But the JSX is the easy way to write a code
    */
-  return React.createElement(
-    "div",
-    {},
-    React.createElement("h2", {}, "Let start it"),
-    React.createElement(Expenses, { items: expenses })
-  );
-  // return (
-  //   <div>
-  //     <h2>Let start it</h2>
-  //     <Expenses items={expenses} />
-  //   </div>
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Let start it"),
+  //   React.createElement(Expenses, { items: expenses })
   // );
+  console.log(expenses);
+  return (
+    <div>
+      <NewExpenses onAddExpenses={addExpensesHandler} />
+      <Expenses items={expenses} />
+    </div>
+  );
 }
 
 export default App;
