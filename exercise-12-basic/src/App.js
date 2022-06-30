@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpenses from "./components/NewExpenses/NewExpenses";
-// Add commment from company id
-
 function App() {
   const [expenses, setExpenses] = useState([
     {
