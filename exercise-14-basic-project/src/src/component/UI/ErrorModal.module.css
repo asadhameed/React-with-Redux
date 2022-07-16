@@ -1,0 +1,38 @@
+.backDrop{
+    position: fixed;
+    background: rgba(0,0,0 , 0.8);
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+.modal{
+    position: fixed;
+    top: 30vh;
+    left: 30%;
+    width: 60%;
+    max-width: 35rem;
+    background: white;
+    z-index: 100;
+    overflow: hidden;
+}
+.header{
+    
+    background: #461B7E;
+    padding: 1rem;
+}
+.header h2{
+    color: white;
+}
+
+.content{
+    margin: 2rem 1.5rem;
+
+}
+
+.actoins {
+      display: flex;
+      justify-content: end;
+      padding: 1rem
+      
+}
