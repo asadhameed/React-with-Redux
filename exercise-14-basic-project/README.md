@@ -3,7 +3,15 @@
 Learning New Concept in React. How can make Modal  
  1. How can use useState, How can handle error 
  2. How can make modal and how can close the modal
-   
+ 3. JSX should retrunt one element in react
+    1. Return html/Jsx element one root element (ErrorModal.js Return inside in div)
+    2. Return html/Jsx elements inside <></> (App.js return all elements inside <>)
+    3. Reutrn html/Jsx elements inside React.Fragment (AddUser.js all elements inside in Fragment )
+    4. you can create own Wrapper element (Wrapper.js whcih is use inside Button.js)
+ 4. How can we use Portal in react Project
+    1. First Make in div inside public/index.html
+    2. And then use ReactDOM.createPortal (ErrorModal.js)
+ 5. How Can use useRef hook in React (AddUser.Js)
 
 ## Packages download in the project
 
