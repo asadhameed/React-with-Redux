@@ -12,6 +12,10 @@ Learning New Concept in React. How can make Modal
     1. First Make in div inside public/index.html
     2. And then use ReactDOM.createPortal (ErrorModal.js)
  5. How Can use useRef hook in React (AddUser.Js)
+ 6. Create a Dockerfile
+ 7. Create a .dockerignore file
+ 8. Build docker file `docker build --tag app .`
+ 9. Run the image  `docker run -d -p 3000:3000 app`
 
 ## Packages download in the project
 
